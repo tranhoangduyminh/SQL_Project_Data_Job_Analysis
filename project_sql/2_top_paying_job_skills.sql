@@ -6,7 +6,7 @@ What skills are required for the top-paying business analyst jobs?
 */
 
 
-WITH top_paying_job AS (
+WITH top_paying_jobs AS (
   SELECT 
     job_id,
     job_title,
@@ -24,4 +24,11 @@ WITH top_paying_job AS (
   LIMIT 10
 )
 
-SELECT * FROM top_paying_job
+SELECT
+  top_paying_jobs.*,
+  skills
+FROM
+  top_paying_jobs
+INNER JOIN skills_job_dim ON top_paying_jobs.job_id = skills_job_dim.job_id
+INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
+ORDER BY salary_year_avg DESC
