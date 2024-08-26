@@ -6,6 +6,7 @@ Question: What are the most in-demand skills for business analyst?
 => Retrieves the top 5 skills with the highest demand in the job market, providing insights to the most valuable skills for job seekers.
 */
 
+
 SELECT
   skills,
   COUNT(skills_job_dim.job_id) AS demand_count
@@ -18,3 +19,4 @@ WHERE
 GROUP BY skills
 ORDER BY demand_count DESC
 LIMIT 5
+
