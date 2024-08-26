@@ -2,7 +2,7 @@
 What skills are required for the top-paying business analyst jobs?
 - Use the 10 highest paying business analyst job from previous query.
 - Add the specific skills required for these roles
-- Provide information on which skilld do high-paying business analyst roles require.
+=> Provide information on which skilld do high-paying business analyst roles require.
 */
 
 
@@ -27,8 +27,7 @@ WITH top_paying_jobs AS (
 SELECT
   top_paying_jobs.*,
   skills
-FROM
-  top_paying_jobs
+FROM top_paying_jobs
 INNER JOIN skills_job_dim ON top_paying_jobs.job_id = skills_job_dim.job_id
 INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 ORDER BY salary_year_avg DESC
