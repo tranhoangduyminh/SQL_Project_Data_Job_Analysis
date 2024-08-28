@@ -1,6 +1,6 @@
 /*
 Question: What are the most optimal (high demand, high paying) skills to learn?
-- Identify skills in high demand and associated with high average salariesor Business Analyst roles
+- Identify skills in high demand and associated with high average salaries for Business Analyst roles
 - Concentrate on remote positions with specified salaries
 => Target skills that offer job security (high demand) and financial benefits (high salaries), offering strategic insights for career development in business analysis
 */
